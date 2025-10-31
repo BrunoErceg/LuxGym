@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@font-face {
+  font-family: Gilory-Semibold;
+  src:
+    url("/src/assets/fonts/Gilroy-SemiBold.woff") format("woff"),
+    url("/src/assets/fonts/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: semibold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilory-Bold;
+  src:
+    url("/src/assets/fonts/Gilroy-Bold.woff") format("woff"),
+    url("/src/assets/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@theme {
+  --font-gilory: "Gilory-Semibold", sans-serif;
+  --font-gilory-bold: "Gilory-bold", sans-serif;
+  --color-primary: #dd0303;
+  --color-light: #e1e1e1;
+  --color-dark: #2f3031;
+  --color-light-dark: #737579;
+}
+
+@layer base {
+  body {
+    @apply font-gilory selection:bg-primary text-dark overflow-x-hidden antialiased selection:text-white;
+  }
+  h2 {
+    @apply font-gilory-bold mb-18 text-5xl;
+  }
+  h3 {
+    @apply font-gilory-bold mb-3 text-3xl;
+  }
+  h4 {
+    @apply font-gilory-bold mb-3 text-2xl;
+  }
+  h5 {
+    @apply font-gilory-bold mb-4 text-base tracking-widest;
+  }
+}
+
+@layer components {
+  .container {
+    margin-inline: auto;
+    padding: 0 1.3rem;
+  }
+}
+
+@layer utilities {
+  .underline-animation {
+    @apply after:bg-primary relative after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:transition-transform after:duration-300 after:content-[''] hover:cursor-pointer hover:after:scale-x-100;
+  }
+
+  @media (min-width: 1024px) {
+    .text-outline.white {
+      -webkit-text-stroke: 1px #e1e1e1;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+    }
+  }
+
+  .dotted-line {
+    background-image: linear-gradient(
+      to right,
+      rgb(169, 169, 169) 20%,
+      rgba(255, 255, 255, 0) 0%
+    );
+    background-position: left;
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+  }
+  .cookie-manager button.cookie-button {
+    padding: 4px 20px !important;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px !important;
+    font-family: Gilory-Semibold !important;
+    color: #fff !important;
+    background-color: #2f3031 !important;
+    transition:
+      background-color,
+      0.2s ease-in-out;
+  }
+  .cookie-manager button.cookie-button:hover {
+    background-color: #141414 !important;
+  }
+  .cookie-manager button.cookie-button.red {
+    background-color: #dd0303 !important;
+  }
+  .cookie-manager button.cookie-button.red:hover {
+    background-color: #c90202 !important;
+  }
+}
