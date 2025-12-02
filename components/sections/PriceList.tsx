@@ -11,8 +11,10 @@ function PriceList() {
     <Section id="priceList">
       <Container>
         <TextGroup centered={true}>
-          <h5>{t("priceList.subtitle")}</h5>
-          <h2 className="mb-20 translate-x-0.5">{t("priceList.title")}</h2>
+          <h5 className="text-center">{t("priceList.subtitle")}</h5>
+          <h2 className="text-center mb-20 translate-x-0.5">
+            {t("priceList.title")}
+          </h2>
         </TextGroup>
         <Columns sm={1} md={2} lg={2} className="gap-0 md:gap-8">
           <div>

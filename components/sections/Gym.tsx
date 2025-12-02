@@ -10,6 +10,7 @@ import Container from "@layout/Container";
 import TextGroup from "@layout/TextGroup";
 import Columns from "@layout/Columns";
 import Card from "@ui/Card";
+import Image from "next/image";
 
 function Gym() {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ function Gym() {
           <h5>{t("gym.subtitle")}</h5>
           <h2>
             {t("gym.title")}{" "}
-            <FontAwesomeIcon icon={faHeart} className="text-primary" />
+            <FontAwesomeIcon icon={faHeart} className="text-primary size-7" />
           </h2>
         </TextGroup>
 
