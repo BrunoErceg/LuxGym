@@ -4,7 +4,7 @@ type HeroLayoutProps = {
 
 function HeroLayout({ children }: HeroLayoutProps) {
   return (
-    <section className="text-light relative flex h-screen w-screen flex-col justify-between  py-8 overflow-hidden">
+    <section className="text-light relative flex h-170 md:h-screen w-screen flex-col justify-between py-8 overflow-hidden">
       {children}
     </section>
   );

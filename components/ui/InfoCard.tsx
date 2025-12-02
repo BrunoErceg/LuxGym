@@ -23,8 +23,8 @@ function InfoCard({
         className
       )}
     >
-      <h4 className="m-0">{title}</h4>
-      <h3 className="m-0 md:text-6xl">
+      <h4 className="m-0 text-left">{title}</h4>
+      <h3 className="m-0 md:text-6xl text-left">
         <CountingAnimation countTo={countTo} duration={duration} />+
       </h3>
       <p className="text-xs md:text-xl">{description}</p>

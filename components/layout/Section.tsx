@@ -19,7 +19,7 @@ function Section({ padding = "md", id, className, children }: SectionProps) {
     xs: "py-2 md:py-5",
     sm: "py-8 md:py-10",
     md: "py-15 md:py-20",
-    lg: "py-20 md:py-30",
+    lg: "py-10 md:py-30",
     xl: "py-25 md:py-40",
     xxl: "py-30 md:py-50",
   };

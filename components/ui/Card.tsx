@@ -20,7 +20,7 @@ function Card({ title, description, icon, animationDelay = 0 }: CardProps) {
           className="size-18 mx-auto md:mx-0 md:size-24"
         />
         <h3>{title}</h3>
-        <p className="text-center md:text-left text-light-dark">
+        <p className="mx-[10%] md:mx-0 text-center md:text-left text-light-dark">
           {description}
         </p>
       </div>

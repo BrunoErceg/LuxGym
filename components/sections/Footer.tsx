@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="text-light-dark bg-[#141414] pt-16 text-lg">
       <Container>
-        <Columns sm={1} md={2} lg={4} gap="md">
+        <Columns sm={1} md={2} lg={4} gap="lg">
           <div>
             <p className="font-gilory-bold mb-4 text-4xl text-white">LUX GYM</p>
             <p>
@@ -21,7 +21,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white">{t("footer.contact")}</h4>
+            <h4 className="text-white text-left">{t("footer.contact")}</h4>
             <Stack direction="col" gap="sm">
               <p>
                 {t("footer.number")}
@@ -35,11 +35,13 @@ function Footer() {
             </Stack>
           </div>
           <div>
-            <h4 className="text-white">{t("footer.address")}</h4>
+            <h4 className="text-white text-left">{t("footer.address")}</h4>
             <Link link={SOCIAL_LINKS.google}>{INFO.address}</Link>
           </div>
           <div>
-            <h4 className="text-white">{t("footer.openingHours.title")}</h4>
+            <h4 className="text-white text-left">
+              {t("footer.openingHours.title")}
+            </h4>
             <a>{t("footer.openingHours.description")}</a>
           </div>
         </Columns>
