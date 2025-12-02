@@ -16,7 +16,7 @@ function PersonalTrainer() {
   return (
     <Section padding="lg" id="personalTrainer">
       <Container>
-        <Columns sm={1} md={1} lg={2} gap="lg">
+        <Columns sm={1} md={1} lg={2} gap="md">
           <Flex direction="col" justify="center" className="justify-center">
             <h5>Luka Škubonja</h5>
             <h2 className="translate-x-0.5">{t("personalTrainer.title")}</h2>

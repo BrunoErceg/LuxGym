@@ -48,7 +48,7 @@ function Hero() {
           </h1>
         </InViewAnimation>
         <InViewAnimation delay={0.6}>
-          <p className="text-md md:text-xl">
+          <p className="text-center md:text-left text-md md:text-xl">
             <Trans i18nKey="hero.description">
               Vaša{" "}
               <span className="decoration-primary underline">omiljena</span>{" "}

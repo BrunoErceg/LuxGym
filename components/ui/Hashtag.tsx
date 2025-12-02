@@ -11,17 +11,17 @@ function Hashtag({ className }: hastagProps) {
   const hashtags = useHashtagsList();
 
   return (
-    <div className={cn("bg-primary flex overflow-hidden", className)}>
+    <div className={cn("bg-primary flex transform overflow-hidden", className)}>
       <motion.ul
         initial={{ x: 0 }}
         animate={{ x: "-50%" }}
         transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-        className="flex w-fit gap-14 py-6 pl-14"
+        className="flex w-fit gap-5 md:gap-14 py-4 md:py-6 pl-14"
       >
         {[...hashtags, ...hashtags].map((hastag, index) => {
           return (
             <li key={index}>
-              <p className="text-3xl text-white">#{hastag}</p>
+              <p className="md:text-3xl text-white">#{hastag}</p>
             </li>
           );
         })}

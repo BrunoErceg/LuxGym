@@ -31,19 +31,19 @@
     @apply font-gilory selection:bg-primary text-dark overflow-x-hidden antialiased selection:text-white;
   }
   h1 {
-    @apply font-gilory-bold mb-5 ml-[-5px] text-3xl md:text-8xl lg:text-9xl leading-[0.8em] lg:mb-8;
+    @apply text-center md:text-left font-gilory-bold mb-3 md:mb-5 ml-[-5px] text-3xl md:text-8xl lg:text-9xl leading-[0.8em] lg:mb-8;
   }
   h2 {
-    @apply font-gilory-bold mb-18 text-2xl  md:text-5xl;
+    @apply text-center md:text-left font-gilory-bold mb-18 text-2xl  md:text-5xl;
   }
   h3 {
-    @apply font-gilory-bold mb-3 text-2xl md:text-3xl;
+    @apply text-center md:text-left font-gilory-bold mb-2 md:mb-3 text-2xl md:text-3xl;
   }
   h4 {
-    @apply font-gilory-bold mb-3 text-xl md:text-2xl;
+    @apply text-center md:text-left font-gilory-bold mb-2 md:mb-3 text-xl md:text-2xl;
   }
   h5 {
-    @apply font-gilory-bold mb-4 text-base tracking-widest;
+    @apply text-center md:text-left font-gilory-bold mb-2 md:mb-4 text-sm md:text-base tracking-widest;
   }
 }
 
