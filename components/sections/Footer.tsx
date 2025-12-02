@@ -12,7 +12,9 @@ function Footer() {
       <Container>
         <Columns sm={1} md={2} lg={4} gap="lg">
           <div>
-            <p className="font-gilory-bold mb-4 text-4xl text-white">LUX GYM</p>
+            <p className="font-gilory-bold mb-4 text-2xl md:text-4xl text-white">
+              LUX GYM
+            </p>
             <p>
               {t("footer.learnMore")}
               <br />
@@ -47,7 +49,7 @@ function Footer() {
         </Columns>
       </Container>
       <div className="mt-18 bg-[#1c1c1c] py-4">
-        <p className="text-center">
+        <p className="text-center text-sm">
           LuxGym © {new Date().getFullYear() + ". " + t("footer.rights")}
         </p>
       </div>
