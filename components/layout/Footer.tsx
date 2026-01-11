@@ -1,12 +1,22 @@
+// i18
 import { useTranslation } from 'react-i18next';
+
+// Constants
 import { SOCIAL_LINKS, INFO } from '@utils/constants';
+
+// Components
 import Columns from '@layout/Columns';
 import Container from '@layout/Container';
 import Stack from '@layout/Stack';
 import Link from '@ui/Link';
 import Heading from '@ui/Heading';
-import Typography from '../ui/Typography';
+import Typography from '@ui/Typography';
 
+/**
+ * Footer component which displays information about the gym.
+ * It includes links to social media, opening hours, address and contact information.
+ * @returns  A JSX element representing the footer section.
+ */
 function Footer() {
   const { t } = useTranslation();
   return (
