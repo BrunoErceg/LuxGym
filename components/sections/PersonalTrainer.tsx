@@ -1,51 +1,56 @@
+// Next & i18n
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+
+// Utils
+import getExperience from '@utils/experience';
+
+// Images
 import PrivatniTrenerSlika from '@images/privatni-trener.jpg';
-import Accordion from '@ui/Accordion';
+
+// Components
 import Section from '@layout/Section';
 import Container from '@layout/Container';
 import Columns from '@layout/Columns';
 import Flex from '@layout/Flex';
-import getExperience from '@utils/experience';
-import InViewAnimation from '@/components/animations/InViewAnimation';
+import Accordion from '@ui/Accordion';
 import InfoCard from '@ui/InfoCard';
 import Heading from '@ui/Heading';
-import Typography from '../ui/Typography';
+import Typography from '@ui/Typography';
+import InViewAnimation from '@/components/animations/InViewAnimation';
 
+const SERVICES = ['training', 'advice', 'nutrition', 'group'];
+
+/**
+ * PersonalTrainer component, displays information about the personal trainer.
+ *
+ * @returns Section component with information about the personal trainer.
+ */
 function PersonalTrainer() {
   const { godineIskustva, brojKlijenata } = getExperience();
   const { t } = useTranslation();
+
   return (
-    <Section padding="lg" id="personalTrainer" className="">
+    <Section padding="lg" id="personalTrainer">
       <Container>
         <Columns sm={1} md={1} lg={2} gap="md">
-          <Flex direction="col" justify="center" className="justify-center">
+          <Flex direction="col" justify="center">
             <Typography variant="support">Luka Škubonja</Typography>
             <Heading level={2} className="-translate-x-0.5">
               {t('personalTrainer.title')}
             </Heading>
-
-            <Accordion
-              title={t('personalTrainer.training.title')}
-              content={t('personalTrainer.training.description')}
-            />
-            <Accordion
-              title={t('personalTrainer.advice.title')}
-              content={t('personalTrainer.advice.description')}
-            />
-            <Accordion
-              title={t('personalTrainer.nutrition.title')}
-              content={t('personalTrainer.nutrition.description')}
-            />
-            <Accordion
-              title={t('personalTrainer.group.title')}
-              content={t('personalTrainer.group.description')}
-            />
+            {SERVICES.map((service) => (
+              <Accordion
+                key={service}
+                title={t(`personalTrainer.${service}.title`)}
+                content={t(`personalTrainer.${service}.description`)}
+              />
+            ))}
           </Flex>
           <InViewAnimation>
             <Flex justify="end" className="relative lg:ml-[20%]">
               <Image
-                src={PrivatniTrenerSlika.src}
+                src={PrivatniTrenerSlika}
                 width={472}
                 height={611}
                 alt={t('personalTrainer.imgAlt')}
