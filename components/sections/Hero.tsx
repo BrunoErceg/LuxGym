@@ -2,9 +2,7 @@
 // Next
 import Image from 'next/image';
 import Link from 'next/link';
-
-// i18
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // Icons, images & lottie
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -32,7 +30,7 @@ import Typography from '@ui/Typography';
  * @returns Hero component.
  */
 function Hero() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
 
   return (
     <section className="text-light relative flex h-170 w-screen flex-col justify-between overflow-hidden py-8 md:h-screen">
@@ -49,17 +47,12 @@ function Hero() {
       <div className="container">
         <AnimateIn.Individual delay={0.1}>
           <Heading level={1} className="mt-15">
-            <Trans i18nKey="hero.title">
-              Tvoja zona snage i <OutlineText>energije</OutlineText>
-            </Trans>
+            Tvoja zona snage i <OutlineText>energije</OutlineText>
           </Heading>
         </AnimateIn.Individual>
         <AnimateIn.Individual delay={0.2}>
           <Typography variant="subheading">
-            <Trans i18nKey="hero.description">
-              Vaša <span className="decoration-primary underline">omiljena</span> teretana u
-              Šibeniku
-            </Trans>
+            Vaša <span className="decoration-primary underline">omiljena</span> teretana u Šibeniku
           </Typography>
         </AnimateIn.Individual>
       </div>

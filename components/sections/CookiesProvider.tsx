@@ -1,8 +1,8 @@
 'use client';
 import { CookieManager } from 'react-cookie-manager';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 function CookiesProvider({ children }: { children: React.ReactNode }) {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   return (
     <CookieManager
       cookieKitId="68f0e4971bbc36d40feb9dfe"

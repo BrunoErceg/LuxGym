@@ -1,6 +1,6 @@
 'use client';
 // i18
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // Components
 import Section from '@layout/Section';
@@ -48,7 +48,7 @@ const SERVICES = [
  * @returns Section component with information about the prices of services.
  */
 function PriceList() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   return (
     <Section id="priceList">
       <AnimateIn.Container className="container">

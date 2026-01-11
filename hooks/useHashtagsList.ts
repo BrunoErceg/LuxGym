@@ -1,8 +1,7 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
-import i18n from '@/utils/i18n/i18n';
 
 /**
  * Hook that returns a list of hashtags, shuffled randomly.
@@ -10,7 +9,7 @@ import i18n from '@/utils/i18n/i18n';
  * @returns  A list of shuffled hashtags.
  */
 export default function useHashtagsList() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   const [shuffledHashtags, setShuffledHashtags] = useState<string[]>([]);
 
   const currentYear = new Date().getFullYear().toString();
@@ -31,7 +30,7 @@ export default function useHashtagsList() {
 
   useEffect(() => {
     setShuffledHashtags([...hashtags].sort(() => Math.random() - 0.5));
-  }, [t, i18n.language]);
+  }, [t]);
 
   return shuffledHashtags;
 }

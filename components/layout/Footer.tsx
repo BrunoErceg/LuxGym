@@ -1,6 +1,6 @@
 'use client';
 // i18
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // Constants
 import { SOCIAL_LINKS, INFO } from '@utils/constants';
@@ -18,7 +18,7 @@ import Typography from '@ui/Typography';
  * @returns  A JSX element representing the footer section.
  */
 function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   return (
     <footer className="text-light-dark bg-[#141414] pt-16 text-lg">
       <div className="container">

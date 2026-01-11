@@ -1,6 +1,6 @@
 'use client';
 // i18
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // react-photo-view
 import { PhotoProvider } from 'react-photo-view';
@@ -61,7 +61,7 @@ const IMAGES = [
  * a div containing GalleryImg components.
  */
 function Gallery() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   return (
     <Section padding="none" id="gallery">
       <PhotoProvider>

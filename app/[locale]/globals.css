@@ -2,8 +2,8 @@
 @font-face {
   font-family: Gilory-Semibold;
   src:
-    url('../styles/fonts/Gilroy-SemiBold.woff') format('woff'),
-    url('../styles/fonts/Gilroy-SemiBold.woff2') format('woff2');
+    url('@styles/fonts/Gilroy-SemiBold.woff') format('woff'),
+    url('@styles/fonts/Gilroy-SemiBold.woff2') format('woff2');
   font-weight: semibold;
   font-style: normal;
 }
@@ -11,8 +11,8 @@
 @font-face {
   font-family: Gilory-Bold;
   src:
-    url('../styles/fonts/Gilroy-Bold.woff') format('woff'),
-    url('../styles/fonts/Gilroy-Bold.woff2') format('woff2');
+    url('@styles/fonts/Gilroy-Bold.woff') format('woff'),
+    url('@styles/fonts/Gilroy-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }

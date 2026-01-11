@@ -1,20 +1,31 @@
-"use client";
+'use client';
 
-// I18
-import { changeLanguage } from "i18next";
-import i18n from "i18next";
-
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { usePathname, useRouter } from 'next/navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { useLocale } from 'next-intl';
 
 function LangSwitcher() {
+  const locale = useLocale(); // Trenutni jezik (hr ili en)
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const toggleLanguage = () => {
+    const nextLocale = locale === 'hr' ? 'en' : 'hr';
+
+    // Zamjenjujemo trenutni locale u URL-u novim
+    // npr. /hr/about postaje /en/about
+    const newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
+
+    router.push(newPath);
+  };
+
   return (
     <button
-      className="text-base md:text-xl ml-7 cursor-pointer underline-animation duration-150 ease-in-out"
-      onClick={() => changeLanguage(i18n.language == "hr" ? "en" : "hr")}
+      className="underline-animation ml-7 cursor-pointer text-base duration-150 ease-in-out md:text-xl"
+      onClick={toggleLanguage}
     >
-      {i18n.language === "hr" ? "English" : "Hrvatski"} <FontAwesomeIcon icon={faLanguage} />
+      {locale === 'hr' ? 'English' : 'Hrvatski'} <FontAwesomeIcon icon={faLanguage} />
     </button>
   );
 }

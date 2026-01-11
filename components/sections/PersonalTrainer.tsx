@@ -1,6 +1,7 @@
+'use client';
 // Libraries
 import { AnimateIn } from '@brunoerceg/animate-in';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 // Utils
@@ -26,7 +27,7 @@ const SERVICES = ['training', 'advice', 'nutrition', 'group'];
  */
 function PersonalTrainer() {
   const { godineIskustva, brojKlijenata } = getExperience();
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
 
   return (
     <Section padding="lg" id="personalTrainer">

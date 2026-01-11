@@ -1,5 +1,6 @@
+'use client';
 // React
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // Components
 import Stack from '@layout/Stack';
@@ -14,7 +15,7 @@ const SECTIONS = ['gym', 'personalTrainer', 'gallery', 'priceList'];
  * @returns  A JSX element representing the navigation bar.
  */
 function Navigation() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
   return (
     <nav className="container">
       <div className="flex items-center justify-between">

@@ -1,6 +1,6 @@
 'use client';
 // i18
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 // Animation
 import { AnimateIn } from '@brunoerceg/animate-in';
@@ -47,7 +47,7 @@ const GYM_FEATURES = [
  */
 
 function Gym() {
-  const { t } = useTranslation();
+  const t = useTranslations('ImeSekcije');
 
   return (
     <Section padding="lg" id="gym">

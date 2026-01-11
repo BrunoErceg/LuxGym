@@ -1,3 +1,4 @@
+'use client';
 // Libraries
 import { motion } from 'framer-motion';
 
