@@ -16,7 +16,7 @@
   "hero": {
     "imageAlt": "A personal trainer demonstrates an exercise",
     "title": "Zone of  <1>strength</1> <br> and energy",
-    "description": "Your <2>favorite</2> gym in Šibenik",
+    "description": "Your <1>favorite</1> gym in Šibenik",
     "workingHours": "Mon-Sun 07-22h"
   },
 
@@ -33,7 +33,7 @@
       "description": "Our equipment has been carefully selected to make your workout effective"
     },
     "capacity": {
-      "title": "PassSport",
+      "title": "MultiSport",
       "description": "Access to the largest network of diverse sports facilities. Fully digital, easy to use"
     },
     "atmosphere": {
@@ -70,7 +70,7 @@
     },
     "group": {
       "title": "2 on 1 Training",
-      "description": "Enjoy dynamic training sessions with a friend or partner. Share the path to results and save money, driven by collective energy and the guidance of a trainer."
+      "description": "Enjoy dynamic training sessions with a partner. Share the path to results and save money, driven by collective energy and the guidance of a trainer."
     },
 
     "experience": {
