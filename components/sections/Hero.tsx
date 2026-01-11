@@ -1,14 +1,13 @@
 'use client';
-
-// React
-import { RefContext } from '@context/context';
-import { useContext, useEffect, useState } from 'react';
+// Next
 import Image from 'next/image';
+import Link from 'next/link';
 
 // i18
 import { Trans, useTranslation } from 'react-i18next';
-// Icons & images
 
+// Icons, images & lottie
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { faGoogle, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import background from '@images/teretana-privatni-trening.jpg';
 
@@ -19,11 +18,10 @@ import { SOCIAL_LINKS } from '@/utils/constants';
 import Stack from '@layout/Stack';
 import Navigation from '@layout/Navigation';
 import OutlineText from '@ui/OutlineText';
-import ArrowDown from '@ui/ArrowDown';
 import NavIcon from '@ui/NavIcon';
 import InViewAnimation from '@/components/animations/InViewAnimation';
-import Heading from '../ui/Heading';
-import Typography from '../ui/Typography';
+import Heading from '@ui/Heading';
+import Typography from '@ui/Typography';
 
 /**
  * Hero component, displays hero section with background image, navigation and social links.
@@ -31,12 +29,7 @@ import Typography from '../ui/Typography';
  * @returns Hero component.
  */
 function Hero() {
-  const sectionRef = useContext(RefContext);
   const { t } = useTranslation();
-  const [, setRerender] = useState(false);
-  useEffect(() => {
-    setRerender(true);
-  }, []);
 
   return (
     <section className="text-light relative flex h-170 w-screen flex-col justify-between overflow-hidden py-8 md:h-screen">
@@ -75,7 +68,14 @@ function Hero() {
               <NavIcon link={SOCIAL_LINKS.whatsapp} icon={faWhatsapp} />
               <NavIcon link={SOCIAL_LINKS.google} icon={faGoogle} className="scale-90" />
             </Stack>
-            <ArrowDown sectionRef={sectionRef} />
+            <Link href="#gym">
+              <DotLottieReact
+                src="https://lottie.host/1dac55c6-aa15-41cd-9c5f-bda4c7dd727a/SgsRGo01oy.lottie"
+                loop
+                autoplay
+                className="color-white h-20 translate-x-[60px] translate-y-2.5 hover:cursor-pointer"
+              />
+            </Link>
           </div>
         </InViewAnimation>
       </div>

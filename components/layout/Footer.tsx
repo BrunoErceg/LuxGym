@@ -1,3 +1,4 @@
+'use client';
 // i18
 import { useTranslation } from 'react-i18next';
 

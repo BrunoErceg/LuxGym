@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import Heading from '@ui/Heading';
 import Typography from './Typography';

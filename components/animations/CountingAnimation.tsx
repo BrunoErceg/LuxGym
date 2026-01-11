@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+'use client';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 type CountingAnimationProps = {
   countTo: number;
@@ -7,11 +8,7 @@ type CountingAnimationProps = {
   className?: string;
 };
 
-function CountingAnimation({
-  countTo,
-  duration = 2000,
-  className,
-}: CountingAnimationProps) {
+function CountingAnimation({ countTo, duration = 2000, className }: CountingAnimationProps) {
   const [count, setCount] = useState(0);
   const [startCount, setStartCount] = useState(false);
   useEffect(() => {

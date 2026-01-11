@@ -15,7 +15,7 @@ import Section from '@layout/Section';
  */
 function HashTags() {
   return (
-    <Section className="pt-0 pb-20 md:pt-0 md:pb-15">
+    <Section id="hashtag" className="pt-0 pb-20 md:pt-0 md:pb-15">
       <HashtagBanner className="relative z-10 w-[120%] translate-x-[-50px] translate-y-10 -rotate-12 md:translate-y-[50px] md:-rotate-12 lg:rotate-[-9deg]" />
       <HashtagBanner className="bg-dark rotate-1" />
     </Section>

@@ -5,10 +5,6 @@ import { HTMLAttributes, ReactNode } from 'react';
 type HeadingProps = VariantProps<typeof HeadingVariants> &
   HTMLAttributes<HTMLHeadingElement> & {
     level: 1 | 2 | 3 | 4;
-    white?: boolean;
-    footer?: boolean;
-    className?: string;
-    children: ReactNode;
   };
 
 const HeadingVariants = cva('font-gilory-bold text-center md:text-left', {

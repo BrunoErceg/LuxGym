@@ -25,6 +25,10 @@
   --color-dark: #2f3031;
   --color-light-dark: #737579;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
 
 @layer base {
   html {
