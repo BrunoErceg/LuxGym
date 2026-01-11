@@ -3,7 +3,7 @@ import { RefContext } from '@context/context.tsx';
 import PriceList from '@/components/sections/PriceList';
 import CookiesProvider from '@/components/sections/CookiesProvider';
 import Footer from '@/components/layout/Footer';
-import Galery from '@/components/sections/Galery';
+import Gallery from '@/components/sections/Gallery';
 import Hashtags from '@/components/sections/Hashtags';
 import Hero from '@/components/sections/Hero';
 import PersonalTrainer from '@/components/sections/PersonalTrainer';
@@ -20,7 +20,7 @@ function Homepage() {
         <Gym />
         <Hashtags />
         <PersonalTrainer />
-        <Galery />
+        <Gallery />
         <PriceList />
         <Footer />
       </RefContext.Provider>

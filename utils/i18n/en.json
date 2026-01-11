@@ -83,10 +83,10 @@
       "description": "Satisfied Clients"
     }
   },
-  "galery": {
+  "gallery": {
     "bikeImgAlt": "Cardio on a bike",
     "gymImgAlt": "Gym interior",
-    "personalTreinerImgAlt": "Personal trainer supervises lat pulldown",
+    "personalTrainerImgAlt": "Personal trainer supervises lat pulldown",
     "latpulldownImgAlt": "Personal trainer demonstrates lat pulldown",
     "receptionImgAlt": "Gym membership",
     "lockerRoomImgAlt": "Locker room",

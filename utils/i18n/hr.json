@@ -84,10 +84,10 @@
     }
   },
 
-  "galery": {
+  "gallery": {
     "bikeImgAlt": "Kardio na bicikli",
     "gymImgAlt": "Unutarnji prostor teretane",
-    "personalTreinerImgAlt": "Privatni trener nadgleda vježbanje lat pulldowna",
+    "personalTrainerImgAlt": "Privatni trener nadgleda vježbanje lat pulldowna",
     "latpulldownImgAlt": "Privatni trener pokazuje lat pulldown",
     "receptionImgAlt": "Učlanjivanje u teretanu",
     "lockerRoomImgAlt": "Svlačionica",
