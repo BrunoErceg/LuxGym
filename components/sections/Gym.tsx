@@ -2,6 +2,9 @@
 // i18
 import { useTranslation } from 'react-i18next';
 
+// Animation
+import { AnimateIn } from '@brunoerceg/animate-in';
+
 // Icons & Images
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -58,19 +61,19 @@ function Gym() {
             {t('gym.title')} <FontAwesomeIcon icon={faHeart} className="text-primary size-7" />
           </Heading>
         </TextGroup>
-
-        <Columns sm={1} md={2} lg={4} gap="lg">
-          {GYM_FEATURES.map(({ key, icon }) => {
-            return (
-              <Card
-                key={key}
-                title={t(`gym.${key}.title`)}
-                description={t(`gym.${key}.description`)}
-                icon={icon.src}
-              />
-            );
-          })}
-        </Columns>
+        <AnimateIn.Container stagger="medium">
+          <Columns sm={1} md={2} lg={4} gap="lg">
+            {GYM_FEATURES.map(({ key, icon }) => (
+              <AnimateIn.Item key={key}>
+                <Card
+                  title={t(`gym.${key}.title`)}
+                  description={t(`gym.${key}.description`)}
+                  icon={icon.src}
+                />
+              </AnimateIn.Item>
+            ))}
+          </Columns>{' '}
+        </AnimateIn.Container>
       </div>
     </Section>
   );

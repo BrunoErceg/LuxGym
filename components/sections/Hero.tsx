@@ -14,6 +14,9 @@ import background from '@images/teretana-privatni-trening.jpg';
 // Constants
 import { SOCIAL_LINKS } from '@/utils/constants';
 
+// Animation
+import { AnimateIn } from '@brunoerceg/animate-in';
+
 // Components
 import Stack from '@layout/Stack';
 import Navigation from '@layout/Navigation';
@@ -40,28 +43,29 @@ function Hero() {
         sizes="90vw"
         className="relative z-[-1] object-cover"
       />
-      <Navigation />
-
+      <AnimateIn.Individual from="none" delay={0}>
+        <Navigation />
+      </AnimateIn.Individual>
       <div className="container">
-        <InViewAnimation delay={0.4}>
+        <AnimateIn.Individual delay={0.1}>
           <Heading level={1} className="mt-15">
             <Trans i18nKey="hero.title">
               Tvoja zona snage i <OutlineText>energije</OutlineText>
             </Trans>
           </Heading>
-        </InViewAnimation>
-        <InViewAnimation delay={0.6}>
+        </AnimateIn.Individual>
+        <AnimateIn.Individual delay={0.2}>
           <Typography variant="subheading">
             <Trans i18nKey="hero.description">
               Vaša <span className="decoration-primary underline">omiljena</span> teretana u
               Šibeniku
             </Trans>
           </Typography>
-        </InViewAnimation>
+        </AnimateIn.Individual>
       </div>
 
       <div className="container">
-        <InViewAnimation delay={0.9} direction="none">
+        <AnimateIn.Individual delay={0.3}>
           <div className="flex items-end justify-between">
             <Stack>
               <NavIcon link={SOCIAL_LINKS.instagram} icon={faInstagram} />
@@ -77,7 +81,7 @@ function Hero() {
               />
             </Link>
           </div>
-        </InViewAnimation>
+        </AnimateIn.Individual>
       </div>
     </section>
   );

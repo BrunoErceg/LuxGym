@@ -9,6 +9,7 @@ import Columns from '@layout/Columns';
 import PriceListItem from '@ui/PriceListItem';
 import Heading from '@ui/Heading';
 import Typography from '@ui/Typography';
+import { AnimateIn } from '@brunoerceg/animate-in';
 
 const SERVICES = [
   {
@@ -50,36 +51,40 @@ function PriceList() {
   const { t } = useTranslation();
   return (
     <Section id="priceList">
-      <div className="container">
+      <AnimateIn.Container className="container">
         <TextGroup centered={true}>
-          <Typography variant="support">{t('priceList.subtitle')}</Typography>
+          <AnimateIn.Item>
+            <Typography variant="support">{t('priceList.subtitle')}</Typography>
+          </AnimateIn.Item>
           <Heading level={2} className="mb-20 translate-x-0.5 md:text-center">
-            {t('priceList.title')}
+            <AnimateIn.Words>{t('priceList.title')}</AnimateIn.Words>
           </Heading>
         </TextGroup>
-        <Columns sm={1} md={2} lg={2} className="gap-0 md:gap-8">
-          <div>
-            {SERVICES.slice(0, 4).map(({ service, price }) => (
-              <PriceListItem
-                key={service}
-                usluga={t(`priceList.${service}.title`)}
-                opis={t(`priceList.${service}.description`)}
-                cijena={price}
-              />
-            ))}
-          </div>
-          <div>
-            {SERVICES.slice(4).map(({ service, price }) => (
-              <PriceListItem
-                key={service}
-                usluga={t(`priceList.${service}.title`)}
-                opis={t(`priceList.${service}.description`)}
-                cijena={price}
-              />
-            ))}
-          </div>
-        </Columns>
-      </div>
+        <AnimateIn.Item>
+          <Columns sm={1} md={2} lg={2} className="gap-0 md:gap-8">
+            <div>
+              {SERVICES.slice(0, 4).map(({ service, price }) => (
+                <PriceListItem
+                  key={service}
+                  usluga={t(`priceList.${service}.title`)}
+                  opis={t(`priceList.${service}.description`)}
+                  cijena={price}
+                />
+              ))}
+            </div>
+            <div>
+              {SERVICES.slice(4).map(({ service, price }) => (
+                <PriceListItem
+                  key={service}
+                  usluga={t(`priceList.${service}.title`)}
+                  opis={t(`priceList.${service}.description`)}
+                  cijena={price}
+                />
+              ))}
+            </div>
+          </Columns>
+        </AnimateIn.Item>
+      </AnimateIn.Container>
     </Section>
   );
 }

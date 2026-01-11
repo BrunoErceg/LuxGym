@@ -1,4 +1,5 @@
-// Next & i18n
+// Libraries
+import { AnimateIn } from '@brunoerceg/animate-in';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
@@ -15,7 +16,6 @@ import Accordion from '@ui/Accordion';
 import InfoCard from '@ui/InfoCard';
 import Heading from '@ui/Heading';
 import Typography from '@ui/Typography';
-import InViewAnimation from '@/components/animations/InViewAnimation';
 
 const SERVICES = ['training', 'advice', 'nutrition', 'group'];
 
@@ -32,20 +32,24 @@ function PersonalTrainer() {
     <Section padding="lg" id="personalTrainer">
       <div className="container">
         <Columns sm={1} md={1} lg={2} gap="md">
-          <div className="flex flex-col justify-center">
-            <Typography variant="support">Luka Škubonja</Typography>
+          <AnimateIn.Container className="flex flex-col justify-center">
+            <AnimateIn.Item className="mx-auto md:mx-0">
+              <Typography variant="support">Luka Škubonja</Typography>
+            </AnimateIn.Item>
             <Heading level={2} className="-translate-x-0.5">
-              {t('personalTrainer.title')}
+              <AnimateIn.Words from="bottom">{t('personalTrainer.title')}</AnimateIn.Words>
             </Heading>
-            {SERVICES.map((service) => (
-              <Accordion
-                key={service}
-                title={t(`personalTrainer.${service}.title`)}
-                content={t(`personalTrainer.${service}.description`)}
-              />
-            ))}
-          </div>
-          <InViewAnimation>
+            <AnimateIn.Item delay={0.3}>
+              {SERVICES.map((service) => (
+                <Accordion
+                  key={service}
+                  title={t(`personalTrainer.${service}.title`)}
+                  content={t(`personalTrainer.${service}.description`)}
+                />
+              ))}
+            </AnimateIn.Item>
+          </AnimateIn.Container>
+          <AnimateIn.Individual amount={'quarter'}>
             <div className="relative flex justify-end lg:ml-[20%]">
               <Image
                 src={PrivatniTrenerSlika}
@@ -68,7 +72,7 @@ function PersonalTrainer() {
                 />
               </div>
             </div>
-          </InViewAnimation>
+          </AnimateIn.Individual>
         </Columns>
       </div>
     </Section>
