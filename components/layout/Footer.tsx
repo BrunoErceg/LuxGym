@@ -61,6 +61,7 @@ function Footer() {
           </div>
         </Columns>
       </Container>
+
       <div className="mt-18 bg-[#1c1c1c] py-4">
         <Typography variant="copyright">
           LuxGym © {new Date().getFullYear() + '. ' + t('footer.rights')}

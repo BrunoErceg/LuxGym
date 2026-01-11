@@ -19,7 +19,6 @@ import { SOCIAL_LINKS } from '@/utils/constants';
 import Stack from '@layout/Stack';
 import Navigation from '@layout/Navigation';
 import Container from '@layout/Container';
-import Flex from '@layout/Flex';
 import OutlineText from '@ui/OutlineText';
 import ArrowDown from '@ui/ArrowDown';
 import NavIcon from '@ui/NavIcon';
@@ -30,7 +29,7 @@ import Typography from '../ui/Typography';
 /**
  * Hero component, displays hero section with background image, navigation and social links.
  *
- * @returns {JSX.Element} Hero component.
+ * @returns Hero component.
  */
 function Hero() {
   const sectionRef = useContext(RefContext);
@@ -71,14 +70,14 @@ function Hero() {
 
       <Container>
         <InViewAnimation delay={0.9} direction="none">
-          <Flex justify="between" align="end">
+          <div className="flex items-end justify-between">
             <Stack>
               <NavIcon link={SOCIAL_LINKS.instagram} icon={faInstagram} />
               <NavIcon link={SOCIAL_LINKS.whatsapp} icon={faWhatsapp} />
               <NavIcon link={SOCIAL_LINKS.google} icon={faGoogle} className="scale-90" />
             </Stack>
             <ArrowDown sectionRef={sectionRef} />
-          </Flex>{' '}
+          </div>
         </InViewAnimation>
       </Container>
     </section>

@@ -12,7 +12,6 @@ import PrivatniTrenerSlika from '@images/privatni-trener.jpg';
 import Section from '@layout/Section';
 import Container from '@layout/Container';
 import Columns from '@layout/Columns';
-import Flex from '@layout/Flex';
 import Accordion from '@ui/Accordion';
 import InfoCard from '@ui/InfoCard';
 import Heading from '@ui/Heading';
@@ -34,7 +33,7 @@ function PersonalTrainer() {
     <Section padding="lg" id="personalTrainer">
       <Container>
         <Columns sm={1} md={1} lg={2} gap="md">
-          <Flex direction="col" justify="center">
+          <div className="flex flex-col justify-center">
             <Typography variant="support">Luka Škubonja</Typography>
             <Heading level={2} className="-translate-x-0.5">
               {t('personalTrainer.title')}
@@ -46,9 +45,9 @@ function PersonalTrainer() {
                 content={t(`personalTrainer.${service}.description`)}
               />
             ))}
-          </Flex>
+          </div>
           <InViewAnimation>
-            <Flex justify="end" className="relative lg:ml-[20%]">
+            <div className="relative flex justify-end lg:ml-[20%]">
               <Image
                 src={PrivatniTrenerSlika}
                 width={472}
@@ -69,7 +68,7 @@ function PersonalTrainer() {
                   className="bg-primary"
                 />
               </div>
-            </Flex>
+            </div>
           </InViewAnimation>
         </Columns>
       </Container>
