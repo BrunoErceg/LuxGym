@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import Footer from '@/components/layout/Footer';
+import CookiesProvider from '@/components/sections/CookiesProvider';
+
 export const metadata: Metadata = {
-  title: "Lux Gym - Vaša omiljena Teretana u Šibeniku",
-  description: "Tvoja zona snage i energije",
-  keywords: "Gym,Teratana,Šibenik,Fitnes,Trening,Privatni Trener",
+  title: 'Lux Gym - Vaša omiljena Teretana u Šibeniku',
+  description: 'Tvoja zona snage i energije',
+  keywords: 'Gym,Teratana,Šibenik,Fitnes,Trening,Privatni Trener',
   icons: {
-    icon: "/favicon.ico", // Probajte prvo sa .ico
+    icon: '/favicon.ico',
   },
 };
 export default function RootLayout({
@@ -14,8 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+    <html>
+      <body className={`antialiased`}>
+        <CookiesProvider>
+          <main>
+            {children}
+            <Footer />
+          </main>
+        </CookiesProvider>
+      </body>
     </html>
   );
 }
