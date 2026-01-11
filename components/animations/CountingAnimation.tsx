@@ -1,14 +1,24 @@
 'use client';
-import { motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-type CountingAnimationProps = {
+type CountingAnimationProps = HTMLMotionProps<'span'> & {
   countTo: number;
-  duration?: number; // in miliseconds
-  className?: string;
+  duration?: number;
 };
 
-function CountingAnimation({ countTo, duration = 2000, className }: CountingAnimationProps) {
+/**
+ * A React component that displays a counting animation.
+ *
+ * @param {number} countTo - The count to display on the animation.
+ * @param {number} [duration=2000] - The duration of the animation in milliseconds.
+ */
+function CountingAnimation({
+  countTo,
+  duration = 2000,
+  className,
+  ...props
+}: CountingAnimationProps) {
   const [count, setCount] = useState(0);
   const [startCount, setStartCount] = useState(false);
   useEffect(() => {
@@ -30,6 +40,7 @@ function CountingAnimation({ countTo, duration = 2000, className }: CountingAnim
         setStartCount(true);
       }}
       className={className}
+      {...props}
     >
       {count}
     </motion.span>
