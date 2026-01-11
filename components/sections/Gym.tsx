@@ -1,17 +1,47 @@
+// i18
 import { useTranslation } from 'react-i18next';
+
+// Icons & Images
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Vrijeme from '@icons/vrijeme.png';
 import Oprema from '@icons/oprema.png';
 import Organizacija from '@icons/organizacija.png';
 import Atmosfera from '@icons/atmosfera.png';
+
+// Components
 import Section from '@layout/Section';
 import Container from '@layout/Container';
 import TextGroup from '@layout/TextGroup';
 import Columns from '@layout/Columns';
 import Card from '@ui/Card';
 import Heading from '@ui/Heading';
-import Typography from '../ui/Typography';
+import Typography from '@ui/Typography';
+
+const GYM_FEATURES = [
+  {
+    key: 'openingHours',
+    icon: Vrijeme,
+  },
+  {
+    key: 'equipment',
+    icon: Oprema,
+  },
+  {
+    key: 'capacity',
+    icon: Organizacija,
+  },
+  {
+    key: 'atmosphere',
+    icon: Atmosfera,
+  },
+];
+
+/**
+ * Gym component, displays information about the gym.
+ *
+ * @returns Section component with information about the gym.
+ */
 
 function Gym() {
   const { t } = useTranslation();
@@ -30,30 +60,16 @@ function Gym() {
         </TextGroup>
 
         <Columns sm={1} md={2} lg={4} gap="lg">
-          <Card
-            title={t('gym.openingHours.title')}
-            description={t('gym.openingHours.description')}
-            icon={Vrijeme.src}
-            animationDelay={0}
-          />
-          <Card
-            title={t('gym.equipment.title')}
-            description={t('gym.equipment.description')}
-            icon={Oprema.src}
-            animationDelay={0.2}
-          />
-          <Card
-            title={t('gym.capacity.title')}
-            description={t('gym.capacity.description')}
-            icon={Organizacija.src}
-            animationDelay={0.4}
-          />
-          <Card
-            title={t('gym.atmosphere.title')}
-            description={t('gym.atmosphere.description')}
-            icon={Atmosfera.src}
-            animationDelay={0.6}
-          />
+          {GYM_FEATURES.map(({ key, icon }) => {
+            return (
+              <Card
+                key={key}
+                title={t(`gym.${key}.title`)}
+                description={t(`gym.${key}.description`)}
+                icon={icon.src}
+              />
+            );
+          })}
         </Columns>
       </Container>
     </Section>
