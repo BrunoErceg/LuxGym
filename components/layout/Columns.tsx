@@ -2,11 +2,7 @@ import { cn } from '@utils/cn';
 import { cva, VariantProps } from 'class-variance-authority';
 import { HTMLAttributes, ReactNode } from 'react';
 
-type ColumnsProps = VariantProps<typeof columnsVariants> &
-  HTMLAttributes<HTMLDivElement> & {
-    children: ReactNode;
-    className?: string;
-  };
+type ColumnsProps = VariantProps<typeof columnsVariants> & HTMLAttributes<HTMLDivElement>;
 
 const columnsVariants = cva('', {
   variants: {
