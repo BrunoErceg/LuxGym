@@ -1,11 +1,15 @@
-import { cn } from "@utils/cn";
+import { cn } from '@utils/cn';
+import { HTMLAttributes } from 'react';
 
-type LinkProps = {
+type LinkProps = HTMLAttributes<HTMLAnchorElement> & {
   link?: string;
-  children: React.ReactNode;
-  className?: string;
 };
 
+/**
+ * A React component that renders a link with an underline animation.
+ *
+ * @returns A JSX element representing the link.
+ */
 function Link({ link, children, className }: LinkProps) {
   return (
     <a

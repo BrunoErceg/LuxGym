@@ -24,8 +24,6 @@ const typographyVariants = cva('', {
 type TypographyProps = VariantProps<typeof typographyVariants> &
   HTMLAttributes<HTMLParagraphElement> & {
     centered?: boolean;
-    className?: string;
-    children: ReactNode;
   };
 
 /**

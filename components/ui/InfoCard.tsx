@@ -1,30 +1,39 @@
-import { cn } from "@utils/cn";
-import CountingAnimation from "@animations/CountingAnimation";
+import { cn } from '@utils/cn';
+import CountingAnimation from '@animations/CountingAnimation';
+import { HTMLAttributes } from 'react';
 
-type InfoCardProps = {
+type InfoCardProps = HTMLAttributes<HTMLDivElement> & {
   title?: string;
   countTo: number;
   description?: string;
-  className?: string;
   duration?: number;
-} & React.ComponentPropsWithoutRef<"div">;
+} & React.ComponentPropsWithoutRef<'div'>;
 
+/**
+ * A React component that displays an info card with a title, count and description.
+ * The component is used to display information about a skill or project.
+ *
+ * @param {string} [title] - The title of the info card.
+ * @param {number} [countTo] - The count to display on the info card.
+ * @param {string} [description] - The description of the info card.
+ * @param {number} [duration=2000] - The duration of the counting animation in milliseconds.
+ * @returns - A React component that displays an info card with a title, count and description.
+ */
 function InfoCard({
   title,
   countTo,
   description,
   className,
   duration = 2000,
+  ...props
 }: InfoCardProps) {
   return (
     <div
-      className={cn(
-        "text-light bg-dark w-full flex-col items-center p-4 md:p-6",
-        className
-      )}
+      className={cn('text-light bg-dark w-full flex-col items-center p-4 md:p-6', className)}
+      {...props}
     >
       <h4 className="m-0 text-left">{title}</h4>
-      <h3 className="m-0 md:text-6xl text-left">
+      <h3 className="m-0 text-left md:text-6xl">
         <CountingAnimation countTo={countTo} duration={duration} />+
       </h3>
       <p className="text-xs md:text-xl">{description}</p>
