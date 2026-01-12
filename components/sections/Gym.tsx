@@ -8,10 +8,10 @@ import { AnimateIn } from '@brunoerceg/animate-in';
 // Icons & Images
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Vrijeme from '@icons/vrijeme.png';
-import Oprema from '@icons/oprema.png';
-import Organizacija from '@icons/organizacija.png';
-import Atmosfera from '@icons/atmosfera.png';
+import Vrijeme from '@icons/vrijeme.svg';
+import Oprema from '@icons/oprema.svg';
+import Organizacija from '@icons/organizacija.svg';
+import Atmosfera from '@icons/atmosfera.svg';
 
 // Components
 import Section from '@layout/Section';

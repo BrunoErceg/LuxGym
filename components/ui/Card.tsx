@@ -24,6 +24,7 @@ function Card({ title, description, icon, className, ...props }: CardProps) {
         src={icon}
         width={94}
         height={94}
+        sizes="94px"
         alt={title}
         className="mx-auto size-18 md:mx-0 md:size-24"
       />

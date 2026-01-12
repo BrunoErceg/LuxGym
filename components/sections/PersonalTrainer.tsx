@@ -54,8 +54,7 @@ function PersonalTrainer() {
             <div className="relative flex justify-end lg:ml-[20%]">
               <Image
                 src={PrivatniTrenerSlika}
-                width={472}
-                height={611}
+                sizes="(max-width: 768px) 100vw, 472px"
                 alt={t('imgAlt')}
                 className="w-full"
               />

@@ -18,7 +18,7 @@ const SECTIONS = ['gym', 'personalTrainer', 'gallery', 'priceList'];
 function Navigation() {
   const t = useTranslations('navigation');
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
     <nav className="container">
       <div className="flex items-center justify-between py-8">

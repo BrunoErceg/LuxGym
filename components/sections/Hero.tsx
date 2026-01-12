@@ -20,7 +20,7 @@ import NavIcon from '@ui/NavIcon';
 import Heading from '@ui/Heading';
 import Typography from '@ui/Typography';
 
-const socialItems = [
+const SOCIAL_ITEMS = [
   { id: 'instagram', icon: faInstagram, link: SOCIAL_LINKS.instagram, label: 'Instagram' },
   { id: 'whatsapp', icon: faWhatsapp, link: SOCIAL_LINKS.whatsapp, label: 'WhatsApp' },
   {
@@ -47,6 +47,7 @@ function Hero() {
         src={background}
         fill
         priority
+        fetchPriority="high"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
         className="relative z-[-1] object-cover"
       />
@@ -69,7 +70,7 @@ function Hero() {
       <div className="container">
         <div className="flex items-end justify-between">
           <Stack>
-            {socialItems.map(({ id, link, icon, label, className }) => (
+            {SOCIAL_ITEMS.map(({ id, link, icon, label, className }) => (
               <NavIcon key={id} link={link} icon={icon} aria-label={label} className={className} />
             ))}
           </Stack>
