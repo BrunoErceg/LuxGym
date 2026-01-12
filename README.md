@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lux Gym Šibenik — V2
 
-## Getting Started
+Lux Gym is a premier fitness facility located in Šibenik, Croatia. This web application represents a high-performance digital presence focused on extreme speed, SEO optimization, and a seamless mobile-first experience.
 
-First, run the development server:
+![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-brightgreen?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/) & [@brunoerceg/animate-in](https://www.npmjs.com/package/@brunoerceg/animate-in)
+- **Internationalization:** [next-intl](https://next-intl-docs.vercel.app/)
+- **Libraries:** CVA (Class Variance Authority), React Photo View, React Cookie Manager, FortAwesome.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+&nbsp;
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💎 Key Features
 
-## Learn More
+- **Peak Performance:** Achieved a perfect **100/100** Desktop score and **96+** Mobile score on Lighthouse.
+- **Custom Animation Engine:** Utilizes my proprietary package **[@brunoerceg/animate-in](https://www.npmjs.com/package/@brunoerceg/animate-in)** for lightweight, high-performance scroll animations.
+- **Advanced Image Optimization:** Fine-tuned LCP (Largest Contentful Paint) using Next Image, priority fetching, and optimized SVG assets.
+- **SEO & Accessibility:** Developed with a "User-First" approach, ensuring high accessibility standards and search engine visibility.
 
-To learn more about Next.js, take a look at the following resources:
+&nbsp;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔄 Evolution: V1 vs. V2
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This version is a complete ground-up refactor of the original site, focusing on technical excellence:
 
-## Deploy on Vercel
+- **Migration to `next-intl`:** Replaced the previous i18n implementation with `next-intl` for faster, server-side internationalization.
+- **Performance Overhaul:** Eliminated dead JS, optimized the critical rendering path, and improved LCP by over 40%.
+- **Architecture:** Refactored for better maintainability with a clean component structure and TypeScript type safety.
+- **Enhanced Content:** Added a dedicated **Legal/Privacy Policy** page and a custom **404** error page.
+- **Optimized Layout:** Fixed Cumulative Layout Shift (CLS) issues through explicit sizing and modern CSS techniques.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+&nbsp;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/brunoerceg/lux-gym.git
+
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+3. Run the development server:
+   ```bash
+    npm run dev
+   ```
+
+Developed by Bruno Erceg
