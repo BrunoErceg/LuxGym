@@ -4,16 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-// Icons, images & lottie
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// Icons & images
 import { faGoogle, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import background from '@images/teretana-privatni-trening.jpg';
+import arrow from '@icons/arrow.svg';
 
 // Constants
 import { SOCIAL_LINKS } from '@/utils/constants';
-
-// Animation
-import { AnimateIn } from '@brunoerceg/animate-in';
 
 // Components
 import Stack from '@layout/Stack';
@@ -22,6 +19,18 @@ import OutlineText from '@ui/OutlineText';
 import NavIcon from '@ui/NavIcon';
 import Heading from '@ui/Heading';
 import Typography from '@ui/Typography';
+
+const socialItems = [
+  { id: 'instagram', icon: faInstagram, link: SOCIAL_LINKS.instagram, label: 'Instagram' },
+  { id: 'whatsapp', icon: faWhatsapp, link: SOCIAL_LINKS.whatsapp, label: 'WhatsApp' },
+  {
+    id: 'google',
+    icon: faGoogle,
+    link: SOCIAL_LINKS.google,
+    label: 'Google',
+    className: 'scale-90',
+  },
+];
 
 /**
  * Hero component, displays hero section with background image, navigation and social links.
@@ -38,48 +47,42 @@ function Hero() {
         src={background}
         fill
         priority
-        sizes="90vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
         className="relative z-[-1] object-cover"
       />
-      <AnimateIn.Individual from="none" delay={0}>
-        <Navigation />
-      </AnimateIn.Individual>
+
+      <Navigation />
       <div className="container">
-        <AnimateIn.Individual delay={0.1}>
-          <Heading level={1} className="mt-15">
-            {t.rich('title', {
-              lineBreak: () => <br />,
-              OutlineText: (chunks) => <OutlineText>{chunks}</OutlineText>,
-            })}
-          </Heading>
-        </AnimateIn.Individual>
-        <AnimateIn.Individual delay={0.2}>
-          <Typography variant="subheading">
-            {t.rich('description', {
-              underline: (chunks) => <span className="decoration-primary underline">{chunks}</span>,
-            })}
-          </Typography>
-        </AnimateIn.Individual>
+        <Heading level={1} className="mt-15">
+          {t.rich('title', {
+            lineBreak: () => <br />,
+            OutlineText: (chunks) => <OutlineText>{chunks}</OutlineText>,
+          })}
+        </Heading>
+        <Typography variant="subheading">
+          {t.rich('description', {
+            underline: (chunks) => <span className="decoration-primary underline">{chunks}</span>,
+          })}
+        </Typography>
       </div>
 
       <div className="container">
-        <AnimateIn.Individual delay={0.3}>
-          <div className="flex items-end justify-between">
-            <Stack>
-              <NavIcon link={SOCIAL_LINKS.instagram} icon={faInstagram} />
-              <NavIcon link={SOCIAL_LINKS.whatsapp} icon={faWhatsapp} />
-              <NavIcon link={SOCIAL_LINKS.google} icon={faGoogle} className="scale-90" />
-            </Stack>
-            <Link href="#gym">
-              <DotLottieReact
-                src="https://lottie.host/1dac55c6-aa15-41cd-9c5f-bda4c7dd727a/SgsRGo01oy.lottie"
-                loop
-                autoplay
-                className="color-white h-20 translate-x-[60px] translate-y-2.5 hover:cursor-pointer"
-              />
-            </Link>
-          </div>
-        </AnimateIn.Individual>
+        <div className="flex items-end justify-between">
+          <Stack>
+            {socialItems.map(({ id, link, icon, label, className }) => (
+              <NavIcon key={id} link={link} icon={icon} aria-label={label} className={className} />
+            ))}
+          </Stack>
+          <Link href="#gym">
+            <Image
+              src={arrow}
+              width={40}
+              height={40}
+              alt="Scroll down to gym details"
+              className="size-7 animate-bounce opacity-90"
+            />
+          </Link>
+        </div>
       </div>
     </section>
   );
