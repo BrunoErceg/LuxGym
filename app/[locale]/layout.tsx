@@ -2,11 +2,9 @@ import '../globals.css';
 import Footer from '@/components/layout/Footer';
 import CookiesProvider from '@/components/sections/CookiesProvider';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import Navigation from '@layout/Navigation';
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
@@ -16,6 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     keywords: t('keywords'),
     icons: {
       icon: '/favicon.ico',
+    },
+    verification: {
+      google: 'ZFU2Ig87LnpOnn7gOsOQeAmI8wU9eYNZ6K9zk1lO64A',
     },
   };
 }
