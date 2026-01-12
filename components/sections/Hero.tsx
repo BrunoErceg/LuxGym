@@ -37,6 +37,7 @@ function Hero() {
         alt={t('imageAlt')}
         src={background}
         fill
+        priority
         sizes="90vw"
         className="relative z-[-1] object-cover"
       />
