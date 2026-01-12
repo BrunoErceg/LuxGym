@@ -35,7 +35,7 @@ function Hero() {
     <section className="text-light relative flex h-170 w-screen flex-col justify-between overflow-hidden pb-8 md:h-screen">
       <Image
         alt={t('imageAlt')}
-        src={background.src}
+        src={background}
         fill
         sizes="90vw"
         className="relative z-[-1] object-cover"

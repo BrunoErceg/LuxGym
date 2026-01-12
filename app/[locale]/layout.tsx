@@ -1,10 +1,22 @@
+// Style
 import '../globals.css';
-import Footer from '@/components/layout/Footer';
-import CookiesProvider from '@/components/sections/CookiesProvider';
+
+// Icons
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
+
+// Components
+import Footer from '@layout/Footer';
+import CookiesProvider from '@sections/CookiesProvider';
+
+// Next
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Analytics } from '@vercel/analytics/next';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
@@ -41,6 +53,7 @@ export default async function RootLayout({
             <Footer />
           </CookiesProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
