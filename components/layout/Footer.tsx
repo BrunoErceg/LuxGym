@@ -1,16 +1,16 @@
 'use client';
-// i18
+// Next
 import { useTranslations } from 'next-intl';
-
 // Constants
 import { SOCIAL_LINKS, INFO } from '@utils/constants';
 
 // Components
 import Columns from '@layout/Columns';
 import Stack from '@layout/Stack';
-import Link from '@ui/Link';
+import ExternalLink from '@/components/ui/ExternalLink';
 import Heading from '@ui/Heading';
 import Typography from '@ui/Typography';
+import { Link } from '@/i18n/navigation';
 
 /**
  * Footer component which displays information about the gym.
@@ -27,7 +27,7 @@ function Footer() {
             <p className="font-gilory-bold mb-4 text-2xl text-white md:text-4xl">LUX GYM</p>
             <Typography variant="footer">
               {t('learnMore')} <br />
-              <Link link={SOCIAL_LINKS.sibenikIn}>Šibenik in</Link>
+              <ExternalLink link={SOCIAL_LINKS.sibenikIn}>Šibenik in</ExternalLink>
             </Typography>
           </div>
 
@@ -38,11 +38,12 @@ function Footer() {
             <Stack direction="col" gap="sm">
               <Typography variant="footer">
                 {t('number')}
-                <Link link={SOCIAL_LINKS.whatsapp}>{INFO.phone}</Link>
+                <ExternalLink link={SOCIAL_LINKS.whatsapp}>{INFO.phone}</ExternalLink>
               </Typography>
               <Typography variant="footer">Email: {INFO.email}</Typography>
               <Typography variant="footer">
-                Instagram: <Link link={SOCIAL_LINKS.instagram}>{INFO.instagram}</Link>
+                Instagram:{' '}
+                <ExternalLink link={SOCIAL_LINKS.instagram}>{INFO.instagram}</ExternalLink>
               </Typography>
             </Stack>
           </div>
@@ -51,7 +52,7 @@ function Footer() {
               {t('address')}
             </Heading>
 
-            <Link link={SOCIAL_LINKS.google}>{INFO.address}</Link>
+            <ExternalLink link={SOCIAL_LINKS.google}>{INFO.address}</ExternalLink>
           </div>
           <div>
             <Heading level={4} footer>
@@ -64,7 +65,8 @@ function Footer() {
 
       <div className="mt-18 bg-[#1c1c1c] py-4">
         <Typography variant="copyright">
-          LuxGym © {new Date().getFullYear() + '. ' + t('rights')}
+          LuxGym © {new Date().getFullYear() + '. '}
+          <Link href="/legal">{t('link')}</Link>
         </Typography>
       </div>
     </footer>

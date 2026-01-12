@@ -32,7 +32,7 @@ function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section className="text-light relative flex h-170 w-screen flex-col justify-between overflow-hidden py-8 md:h-screen">
+    <section className="text-light relative flex h-170 w-screen flex-col justify-between overflow-hidden pb-8 md:h-screen">
       <Image
         alt={t('imageAlt')}
         src={background.src}

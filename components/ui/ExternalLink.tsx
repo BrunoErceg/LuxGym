@@ -10,7 +10,7 @@ type LinkProps = HTMLAttributes<HTMLAnchorElement> & {
  *
  * @returns A JSX element representing the link.
  */
-function Link({ link, children, className }: LinkProps) {
+function ExternalLink({ link, children, className }: LinkProps) {
   return (
     <a
       href={link}
@@ -23,4 +23,4 @@ function Link({ link, children, className }: LinkProps) {
   );
 }
 
-export default Link;
+export default ExternalLink;

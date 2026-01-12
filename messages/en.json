@@ -147,10 +147,22 @@
       "title": "Working Time",
       "description": "Monday through Sunday, 7 a.m. to 10 p.m."
     },
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "link": "Legal Notice"
   },
   "notFound": {
     "title": "Page not Found",
     "link": "Go Back!"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "imprintTitle": "1. Service provider information",
+    "imprintText": "In accordance with the Companies Act, below is the information about the owner of the website: Name: FITNESS CENTAR LUX GYM, service business, owned by Luka Škubonja. Address: Morinjski put 50, 22000, Šibenik. Registration number: 98949721 Contact: luka.skubonja@outlook.com",
+    "privacyTitle": "2. Privacy Policy (GDPR)",
+    "privacyText": "Your privacy is important to us. Since we do not use contact forms, we do not collect your personal information such as names or telephone numbers directly through this website. Google Analytics: This website uses Google Analytics, a web analysis service provided by Google LLC. Google Analytics uses cookies (text files placed on your computer) to help us analyze how visitors use the website. The information collected by the cookie about your use of the website (including your IP address) will be transmitted to Google and stored on their servers. Google uses this information to: Track the number of visitors to the website. Analyze the duration of visits and the most visited parts of the website. Create reports on website activity. You can prevent the use of cookies by selecting the appropriate settings in your browser or via our cookie banner.",
+    "complaintTitle": "3. Cookies Policy",
+    "complaintText": "In addition to analytics cookies (Google Analytics), the site also uses necessary cookies that are essential for its basic functioning (e.g. remembering your choice to accept cookies). Necessary cookies: Always active. Analytical cookies: Only activated if you click Accept on our banner.",
+    "disclaimerTitle": "4. Consumer complaints",
+    "disclaimerText": "In accordance with Article 10 of the Consumer Protection Act, we inform users that they can submit a complaint about the quality of our services in writing. By mail to the address: Morinjski put 51, Šibenik, Ražine. By e-mail to: luka.skubonja@outlook.com We will provide a written response to your complaint no later than 15 days from the date of receipt of the complaint."
   }
 }

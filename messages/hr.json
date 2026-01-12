@@ -1,5 +1,5 @@
 {
-  "Metadata": {
+  "metadata": {
     "title": "Lux Gym - Vaša omiljena Teretana u Šibeniku",
     "description": "Tvoja zona snage i energije",
     "keywords": "Gym,Teretana,Šibenik,Fitness,Trening,Privatni Trener"
@@ -149,11 +149,23 @@
       "title": "Radno Vrijeme",
       "description": "Od ponedjeljka do nedjelje, od 07 do 22 sata"
     },
-    "rights": "Sva prava pridržana."
+    "rights": "Sva prava pridržana.",
+    "link": "Pravne napomene"
   },
 
   "notFound": {
     "title": "Stranica nije pronađena",
     "link": "Idi nazad!"
+  },
+  "legal": {
+    "title": "Pravne napomene",
+    "imprintTitle": "1. Podaci o pružatelju usluga",
+    "imprintText": "Sukladno Zakonu o trgovačkim društvima, u nastavku su podaci o vlasniku stranice: Naziv: FITNESS CENTAR LUX GYM, obrt za usluge, vl. Luka Škubonja. Adresa: Morinjski put 50, 22000, Šibenik. Matični broj: 98949721 Kontakt: luka.skubonja@outlook.com",
+    "privacyTitle": "2. Pravila privatnosti (GDPR)",
+    "privacyText": "Vaša privatnost nam je važna. Budući da ne koristimo kontakt forme, ne prikupljamo vaše osobne podatke poput imena ili brojeva telefona direktno putem ove web stranice. Google Analytics: Ova stranica koristi Google Analytics, uslugu web analize koju pruža Google LLC. Google Analytics koristi kolačiće (tekstualne datoteke smještene na vašem računalu) kako bi nam pomogao analizirati kako posjetitelji koriste stranicu. Podaci koje prikuplja kolačić o vašem korištenju web stranice (uključujući vašu IP adresu) bit će preneseni Googleu i pohranjeni na njihovim poslužiteljima. Google koristi ove podatke za: Praćenje broja posjetitelja na stranici. Analizu trajanja posjeta i najposjećenijih dijelova stranice. Izradu izvješća o aktivnostima na web stranici.Možete spriječiti korištenje kolačića odabirom odgovarajućih postavki u svom pregledniku ili putem našeg bannera za kolačiće.",
+    "complaintTitle": "3. Pravila o kolačićima (Cookies)",
+    "complaintText": "Osim kolačića za analitiku (Google Analytics), stranica koristi i nužne kolačiće koji su neophodni za njezino osnovno funkcioniranje (npr. pamćenje vašeg odabira o prihvaćanju kolačića).Nužni kolačići: Uvijek aktivni.Analitički kolačići: Aktiviraju se samo ako kliknete Prihvati na našem banneru.",
+    "disclaimerTitle": "4. Prigovori potrošača",
+    "disclaimerText": "Sukladno čl. 10. Zakona o zaštiti potrošača, obavještavamo korisnike da prigovor na kvalitetu naših usluga mogu podnijeti u pisanom obliku. Putem pošte na adresu: Morinjski put 51, Šibenik, Ražine. Putem elektroničke pošte na: luka.skubonja@outlook.com Odgovor na vaš prigovor dostavit ćemo u pisanom obliku najkasnije u roku od 15 dana od dana primitka prigovora."
   }
 }

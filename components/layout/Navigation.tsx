@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Stack from '@layout/Stack';
 import LangSwitcher from '@ui/LangSwitcher';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const SECTIONS = ['gym', 'personalTrainer', 'gallery', 'priceList'];
 
@@ -16,26 +17,30 @@ const SECTIONS = ['gym', 'personalTrainer', 'gallery', 'priceList'];
  */
 function Navigation() {
   const t = useTranslations('navigation');
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <nav className="container">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between py-8">
         {/* -- Logo -- */}
         <Link href="/" className="font-gilory-bold text-xl md:text-3xl">
           LUX GYM
         </Link>
 
         {/* -- Scroll Navigation -- */}
-        <Stack gap="lg" className="hidden lg:flex">
-          {SECTIONS.map((section) => (
-            <Link
-              key={section}
-              href={`#${section}`}
-              className="underline-animation relative text-xl"
-            >
-              {t(section)}
-            </Link>
-          ))}
-        </Stack>
+        {pathname === '/' && (
+          <Stack gap="lg" className="hidden lg:flex">
+            {SECTIONS.map((section) => (
+              <Link
+                key={section}
+                href={`#${section}`}
+                className="underline-animation relative text-xl"
+              >
+                {t(section)}
+              </Link>
+            ))}
+          </Stack>
+        )}
 
         {/* -- Language switcher -- */}
         <Stack>
